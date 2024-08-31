@@ -4,16 +4,19 @@ n this task, we designed a class structure to handle both traditional printed bo
 Here’s how you can design the Book and Ebook classes in Python, following the problem statement:
 
 Step-by-step explanation:
-Book class:
 
+1.Book class:
 It has the following instance variables: title, author, publisher, price, and royalty.
 It has getter and setter methods for these variables.
 A royalty() method calculates the royalty for the author based on the number of copies sold with different percentage rates.
-Ebook class (inherits from Book):
 
+2.Ebook class (inherits from Book):
 Adds an additional instance variable format (like EPUB, PDF, etc.).
 Overrides the royalty() method to account for the GST deduction on ebooks.
+
+
 Python Code:
+
 class Book:
     def __init__(self, title, author, publisher, price):
         self._title = title
@@ -110,7 +113,8 @@ ebook.copies_sold = 2000
 print(f"Royalty for ebook (after GST): {ebook.royalty()}")
 
 Explanation:
-The Book class handles the common details such as title, author, publisher, and price.
-The royalty() method in Book calculates royalties based on the number of copies sold, following the given rates.
-The Ebook class inherits from Book and adds an extra format property.
-In Ebook, the royalty() method is overridden to apply a 12% GST deduction on the royalty amount for ebooks.
+
+1.The Book class handles the common details such as title, author, publisher, and price.
+2.The royalty() method in Book calculates royalties based on the number of copies sold, following the given rates.
+3.The Ebook class inherits from Book and adds an extra format property.
+4.In Ebook, the royalty() method is overridden to apply a 12% GST deduction on the royalty amount for ebooks.
